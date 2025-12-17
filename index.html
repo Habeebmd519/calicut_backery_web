@@ -11,25 +11,55 @@
 </head>
 
 <body>
-
+    <!-- APP BAR -->
+    <!-- SEARCH BAR SECTION (HIDDEN BY DEFAULT) -->
+    <section id="searchBarSection" class="search-bar-section">
+        <input type="text" id="searchInput" placeholder="Search for cakes or pastries...">
+    </section>
     <header class="app-bar">
-        <h1>Calicut Bakery</h1>
+        <div class="app-bar-left">
+            <button id="menuBtn" class="icon-btn">⋮</button>
+            <div id="popupMenu" class="popup-menu">
+                <ul>
+                    <li>Home</li>
+                    <li>Orders</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="app-bar-center">
+            <h1>Calicut Bakery</h1>
+        </div>
+
+        <div class="app-bar-right">
+            <button id="searchBtn" class="icon-btn">🔍</button>
+        </div>
     </header>
 
+    <!-- SEARCH BAR SECTION (HIDDEN BY DEFAULT) -->
+    <section id="searchBarSection" class="search-bar-section">
+        <input type="text" id="searchInput" placeholder="Search for cakes or pastries...">
+    </section>
+
+    <!-- HERO SECTION -->
     <section class="hero">
         <h2>Freshly Baked Everyday 🍰</h2>
         <p>Traditional taste, modern quality</p>
     </section>
 
+    <!-- LOADING MESSAGE -->
     <div id="loading" class="loading">Loading items...</div>
 
+    <!-- PRODUCTS GRID -->
     <section id="products" class="products"></section>
 
+    <!-- FOOTER -->
     <footer>
         © 2025 Calicut Bakery
     </footer>
 
-    <!-- VERY IMPORTANT -->
+    <!-- MAIN JS -->
     <script type="module" src="app.js"></script>
 </body>
 

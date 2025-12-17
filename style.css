@@ -1,3 +1,4 @@
+/* GLOBAL STYLES */
 * {
     margin: 0;
     padding: 0;
@@ -12,19 +13,106 @@ body {
 
 /* APP BAR */
 .app-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: sticky;
     top: 0;
     background: white;
-    padding: 16px;
-    text-align: center;
+    padding: 10px 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
 }
 
-.app-bar h1 {
+.app-bar-left,
+.app-bar-center,
+.app-bar-right {
+    display: flex;
+    align-items: center;
+}
+
+.app-bar-center h1 {
+    margin: 0;
+    font-size: 20px;
     color: #8b4513;
+    text-align: center;
 }
 
-/* HERO */
+/* ICON BUTTONS */
+.icon-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* POPUP MENU */
+.popup-menu {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: none;
+    min-width: 120px;
+    z-index: 101;
+}
+
+.popup-menu ul {
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+}
+
+.popup-menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.popup-menu li:hover {
+    background: #fde68a;
+}
+
+/* SEARCH BAR SECTION */
+.search-bar-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: transparent;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    /* above everything */
+    transition: height 0.3s ease;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); */
+}
+
+.search-bar-section.active {
+    max-height: 60px;
+    padding: 30px 0px;
+}
+
+.search-bar-section input {
+    width: 100%;
+    border: none;
+    /* Removes the border */
+    outline: none;
+    /* Removes the default focus outline */
+    padding: 8px 12px;
+    /* Optional: adjust padding */
+    border-radius: 4px;
+    /* Optional: rounded corners */
+    font-size: 14px;
+}
+
+/* HERO SECTION */
 .hero {
     padding: 30px 20px;
     text-align: center;
@@ -47,7 +135,7 @@ body {
     font-size: 16px;
 }
 
-/* PRODUCTS */
+/* PRODUCTS GRID */
 .products {
     padding: 20px;
     display: grid;
@@ -55,7 +143,7 @@ body {
     gap: 16px;
 }
 
-/* CARD */
+/* PRODUCT CARD */
 .card {
     background: white;
     border-radius: 16px;
